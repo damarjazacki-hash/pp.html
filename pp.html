@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinas PUPR Kota Sungai Penuh</title>
+    <style>
+        :root {
+            --biru-tua: #161615;
+            --biru-sedang: #f9f90c;
+            --oranye: #f39c12;
+            --abu-terang: #3f06f7;
+            --putih: #f2ff04;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--abu-terang); color: #333; }
+        
+        /* Header & Navigasi */
+        header { background: var(--putih); padding: 15px 5%; border-bottom: 3px solid var(--biru-tua); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo-container { display: flex; align-items: center; }
+        .logo-container img { height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 1.2rem; margin: 0; color: var(--biru-tua); }
+        
+        nav a { text-decoration: none; color: var(--biru-tua); font-weight: 600; margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; }
+        nav a:hover { color: var(--oranye); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(45deg, rgba(26,55,77,0.9), rgba(64,104,130,0.7)), url('https://via.placeholder.com/1200x500') no-repeat center/cover; color: var(--putih); padding: 100px 10%; display: flex; align-items: center; gap: 30px; }
+        .hero-content { flex: 1; }
+        .hero-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero-img { flex: 1; border: 5px solid var(--oranye); border-radius: 10px; overflow: hidden; }
+        .hero-img img { width: 100%; display: block; }
+
+        /* Section Titles */
+        .section-bar { background: var(--biru-tua); color: var(--putih); padding: 10px 10%; margin-top: 20px; font-weight: bold; }
+        section { padding: 40px 10%; background: var(--putih); }
+
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+        /* Cards & Components */
+        .card { background: var(--putih); border: 1px solid #ddd; padding: 20px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn-more { background: var(--oranye); color: white; padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+
+        .struktur-box { text-align: center; border: 2px dashed var(--biru-sedang); padding: 40px; }
+        
+        /* Video Container */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-top: 20px; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+
+        /* Footer */
+        footer { background: var(--biru-tua); color: white; padding: 40px 10%; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .social-icons a { color: white; font-size: 1.5rem; margin-right: 15px; text-decoration: none; }
+        .copyright { text-align: center; padding: 20px; background: #112636; margin-top: 20px; font-size: 0.8rem; }
+
+        /* Map */
+        .map-container iframe { width: 100%; height: 250px; border: 0; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <div class="logo-text">
+                <h1>DINAS PUPR</h1>
+                <small>KOTA SUNGAI PENUH</small>
+            </div>
+        </div>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#profil">Profil</a>
+            <a href="#kegiatan">Kegiatan</a>
+            <a href="#bidang">bidang</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#program unggulan">program unggulan</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+            <h2>Membangun Infrastruktur, Membangun Negeri</h2>
+            <p>Portal informasi resmi Dinas Pekerjaan Umum dan Penataan Ruang Kota Sungai Penuh.</p>
+            <button class="btn-more">Selengkapnya</button>
+        </div>
+        <div class="hero-img">
+            <img src="kantor.jpeg" alt="Gedung PUPR">
+        </div>
+    </div>
+
+    <div class="section-bar">PROFIL DINAS</div>
+    <section id="profil">
+        <div class="grid-2">
+            <div>
+                <h3>Sejarah Singkat</h3>
+                <p>Dinas Pekerjaan Umum dan Penataan Ruang Kota Sungai Penuh dibentuk berdasarkan peraturan daerah untuk menyelenggarakan urusan pemerintahan di bidang pekerjaan umum dan penataan ruang di wilayah Kota Sungai Penuh.</p>
+                <p>Sejak berdirinya, dinas ini terus berkomitmen meningkatkan kualitas sarana prasarana publik demi kesejahteraan masyarakat.</p>
+            </div>
+            <div class="card">
+                <h3>Visi & Misi</h3>
+                <p><strong>Visi:</strong> Mewujudkan infrastruktur yang handal dan berkelanjutan di Kota Sungai Penuh.</p>
+                <p><strong>Misi:</strong></p>
+                <ul>
+                    <li>Meningkatkan kualitas jalan dan jembatan.</li>
+                    <li>Mengelola sumber daya air secara efektif.</li>
+                    <li>Mewujudkan tata ruang yang serasi dan teratur.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-bar">STRUKTUR ORGANISASI</div>
+    <section>
+        <div class="struktur-box">
+            <img src="kk.jpeg" alt="Bagan Organisasi" style="max-width:100%">
+        </div>
+    </section>
+
+    <div class="section-bar">BERITA & KEGIATAN</div>
+    <section id="kegiatan">
+        <div class="grid-3">
+            <div class="card">
+                <img src="jalan.jpg" alt="Kegiatan 1" style="width:100%">
+                <h4>Perbaikan Jalan Nasional</h4>
+                <p>Pemeliharaan rutin aspal jalan utama untuk kenyamanan pengendara...</p>
+                <button class="btn-more">Baca</button>
+            </div>
+            <div class="card">
+                <img src="d.jpeg" alt="Kegiatan 2" style="width:100%">
+                <h4>Normalisasi Drainase</h4>
+                <p>Pembersihan saluran air sebagai langkah antisipasi banjir musiman...</p>
+                <button class="btn-more">Baca</button>
+            </div>
+            <div class="card">
+                <img src="r.jpeg" alt="Kegiatan 3" style="width:100%">
+                <h4>Rapat Penataan Ruang</h4>
+                <p>Koordinasi lintas sektor terkait rencana tata ruang wilayah kota...</p>
+                <button class="btn-more">Baca</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-bar">BIDANG PELAYANAN</div>
+<section id="bidang">
+    <div class="grid-3">
+        <div class="card">
+            <h4>Bidang Bina Marga</h4>
+            <p>Bertanggung jawab atas pembangunan, pemeliharaan, dan peningkatan kualitas jalan serta jembatan di wilayah kota.</p>
+        </div>
+        <div class="card">
+            <h4>Bidang Sumber Daya Air (SDA)</h4>
+            <p>Fokus pada pengelolaan irigasi, normalisasi sungai, dan pengendalian banjir untuk mendukung sektor pertanian dan pemukiman.</p>
+        </div>
+        <div class="card">
+            <h4>Bidang Cipta Karya</h4>
+            <p>Menangani pengelolaan drainase lingkungan, sistem penyediaan air minum (SPAM), dan penataan bangunan gedung negara.</p>
+        </div>
+        <div class="card">
+            <h4>Bidang Tata Ruang</h4>
+            <p>Mengatur pemanfaatan ruang wilayah kota agar sesuai dengan Rencana Tata Ruang Wilayah (RTRW) yang berkelanjutan.</p>
+        </div>
+        <div class="card">
+            <h4>Bidang Bina Konstruksi</h4>
+            <p>Melaksanakan pembinaan jasa konstruksi, sertifikasi tenaga kerja konstruksi, dan pengawasan mutu bangunan.</p>
+        </div>
+    </div>
+</section>
+
+    <div class="section-bar">GALERI FOTO & VIDEO</div>
+    <section id="galeri">
+        <div class="grid-2">
+            <div>
+                <h4>Dokumentasi Proyek</h4>
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
+                    <img src="foto.jpeg" style="width:100%; border-radius:5px">
+                    <img src="p.jpeg" style="width:100%; border-radius:5px">
+                    <img src="t.jpg" style="width:100%; border-radius:5px">
+                    <img src="g.jpeg" style="width:100%; border-radius:5px">
+                </div>
+            </div>
+            <div>
+                <h4>Video Profil</h4>
+                <div class="video-wrapper">
+                    <iframe src="pu2.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-bar">PROGRAM UNGGULAN 2026</div>
+<section id="unggulan">
+    <div class="grid-2">
+        <div class="card" style="border-left: 5px solid var(--oranye);">
+            <h3>1. Akselerasi Konektivitas Perkotaan</h3>
+            <p>Program percepatan pengaspalan jalan lingkungan dan perbaikan trotoar guna mendukung aksesibilitas ekonomi masyarakat.</p>
+        </div>
+        <div class="card" style="border-left: 5px solid var(--oranye);">
+            <h3>2. Sungai Penuh Bebas Banjir</h3>
+            <p>Optimalisasi sistem drainase terintegrasi dan normalisasi sungai-sungai utama di titik rawan genangan air.</p>
+        </div>
+        <div class="card" style="border-left: 5px solid var(--oranye);">
+            <h3>3. Digitalisasi Tata Ruang (E-Spatial)</h3>
+            <p>Penyediaan layanan informasi tata ruang berbasis digital untuk mempermudah masyarakat dalam pengurusan izin pemanfaatan ruang.</p>
+        </div>
+        <div class="card" style="border-left: 5px solid var(--oranye);">
+            <h3>4. Air Bersih Untuk Semua</h3>
+            <p>Pembangunan dan perluasan jaringan distribusi air bersih hingga ke pelosok kelurahan yang belum terjangkau.</p>
+        </div>
+    </div>
+</section>
+
+    <footer id="kontak">
+        <div class="footer-grid">
+            <div>
+                <h3>Dinas PUPR Sungai Penuh</h3>
+                <p>Jl. Adityawarman No. 123, Kota Sungai Penuh, Jambi 37111</p>
+                <p>Telepon: (0748) 123456<br>Email: info@pupr-sungapenuh.go.id</p>
+            </div>
+            <div>
+                <h3>Tautan Cepat</h3>
+                <p>• LPSE Sungai Penuh<br>• Kementrian PUPR<br>• Pemkot Sungai Penuh</p>
+            </div>
+            <div class="map-container">
+                <h3>Lokasi Kami</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.6444053916!2d101.3855!3d-2.0594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2da194f489f6d1%3A0x633d4e7d17467657!2sSungai%20Penuh%2C%20Jambi!5e0!3m2!1sid!2sid!4v1625000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Dinas PUPR Kota Sungai Penuh. Seluruh Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+</body>
+</html>
